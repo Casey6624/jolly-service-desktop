@@ -1,0 +1,22 @@
+{
+  "name": "Jolly IT | Tasks",
+  "homepage": "https://www.jollyit.co.uk",
+  "authors": [
+    "Casey Smith"
+  ],
+  "description": "A slick app for managing outstanding tasks.",
+  "main": "public/index.html",
+  "keywords": [
+    "Jolly IT"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build"
+  ],
+  "private": true
+}
