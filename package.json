@@ -7,6 +7,7 @@
     "@material-ui/icons": "3.0.2",
     "chartist": "0.10.1",
     "classnames": "2.2.6",
+    "electron-is-dev": "^1.1.0",
     "history": "4.7.2",
     "moment": "^2.24.0",
     "msal": "^1.0.2",
@@ -33,29 +34,26 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "concurrently": "^4.1.1",
     "electron": "^5.0.6",
     "electron-builder": "^21.0.15",
     "eslint-config-prettier": "4.0.0",
-    "eslint-plugin-prettier": "3.0.1"
+    "eslint-plugin-prettier": "3.0.1",
+    "wait-on": "^3.3.0"
   },
   "homepage": "./",
-  "main": "src/electron-starter.js",
+  "main": "public/electron.js",
   "scripts": {
-    "start": "nf start -p 3000",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "electron .",
-    "electron-start": "node src/electron-wait-react",
-    "react-start": "react-scripts start",
-    "pack": "build --dir",
-    "dist": "npm run build && build",
-    "postinstall": "install-app-deps"
+    "electron-dev": "concurrently \"SET BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "build": {
     "appId": "com.electron.electron-with-create-react-app",
     "win": {
-      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+      "iconUrl": "https://media.licdn.com/dms/image/C4D0BAQGL3zsKwYFDww/company-logo_200_200/0?e=2159024400&v=beta&t=mYbrPYx27wmfmhlfwigBMvjuqj2GkiD9EyBuVojEEIE"
     },
     "directories": {
       "buildResources": "public"

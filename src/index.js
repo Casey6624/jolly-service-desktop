@@ -6,6 +6,7 @@ import UnauthenticatedApp from "./RootUnauth/index"
 
 export default function App() {
   const [auth, setAuth] = useState(null)
+  return <AuthenticatedApp auth={auth} setAuth={setAuth} />
   return auth === null ? <UnauthenticatedApp setAuth={setAuth} /> : <AuthenticatedApp auth={auth} setAuth={setAuth} />
 }
 
